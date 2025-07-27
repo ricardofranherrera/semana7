@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(196, 242, 245), rgb(151, 184, 223));
+  margin: 0;
+  padding: 20px;
+}
+
+.notificacion {
+  background-color: rgb(218, 196, 99);
+  padding: 10px;
+  margin: 10px auto;
+  border-left: 5px solid #e6b800;
+  font-weight: bold;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: rgb(83, 224, 78);
+  color: white;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
