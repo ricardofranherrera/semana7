@@ -50,6 +50,23 @@ require_once 'logic/consulta.php';
     <button type="submit">Registrar Hotel</button>
   </form>
 
+<h2>Buscar Vuelos</h2>
+<form method="POST">
+  <input type="hidden" name="buscar_vuelos" value="1">
+  <label>Origen:</label><input type="text" name="origen_buscar">
+  <label>Destino:</label><input type="text" name="destino_buscar">
+  <button type="submit">Buscar</button>
+</form>
+
+<?php if (!empty($resultados_busqueda)): ?>
+  <h3>Resultados encontrados:</h3>
+  <ul>
+    <?php foreach ($resultados_busqueda as $vuelo): ?>
+      <li> <?= htmlspecialchars($vuelo['origen']) ?> → <?= htmlspecialchars($vuelo['destino']) ?> | Fecha: <?= htmlspecialchars($vuelo['fecha']) ?> | $<?= htmlspecialchars($vuelo['precio']) ?></li>
+    <?php endforeach; ?>
+  </ul>
+<?php endif; ?>
+
   <?php if (!empty($_SESSION['carrito'])): ?>
     <h3>Carrito de Viajes:</h3>
     <ul>
